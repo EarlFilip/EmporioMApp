@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-    Login login;
+    Usuario usuario;
     EditText editEmail;
     EditText editSenha;
 
@@ -18,23 +18,22 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         editEmail = (EditText) findViewById(R.id.editEmail);
         editSenha = (EditText) findViewById(R.id.editSenha);
-        login = new Login();
+        usuario = new Usuario();
     }
 
-    public void cadastrarLayout(View v){
+    public void cadastrarLayout(View v) {
 
-        if(login.getSenha().toString() == editSenha.getText().toString()){
-            Intent intent = new Intent(this,CadastroActivity.class);
+        if (usuario.getSenha().toString() == editSenha.getText().toString()) {
+            Intent intent = new Intent(this, CadastroActivity.class);
             startActivity(intent);
-        }else{
+        } else {
             Toast.makeText(MainActivity.this,
-                    "Senha Errada.",
-                    Toast.LENGTH_SHORT).show();
+                    "Senha Errada.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void entrar(View v){
-        Intent intent = new Intent(this,MenuActivity.class);
+    public void entrar(View v) {
+        Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
     }
 

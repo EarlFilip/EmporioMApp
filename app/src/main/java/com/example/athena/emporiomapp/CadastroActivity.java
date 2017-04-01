@@ -2,7 +2,6 @@ package com.example.athena.emporiomapp;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
@@ -14,8 +13,8 @@ public class CadastroActivity extends Activity {
         setContentView(R.layout.activity_cadastro);
     }
 
-    public void voltar(View v){
-        Intent intentv = new Intent(this,MainActivity.class);
+    public void voltar(View v) {
+        Intent intentv = new Intent(this, MainActivity.class);
         startActivity(intentv);
     }
 }
