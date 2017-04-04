@@ -23,12 +23,6 @@ public class MainActivity extends Activity {
     public void cadastrarLayout(View v) {
         Intent intent = new Intent(this, CadastroActivity.class);
         startActivity(intent);
-        /*if (usuario.getSenha().toString() == editSenha.getText().toString()) {
-
-        } else {
-            Toast.makeText(MainActivity.this,
-                    "Senha Errada.", Toast.LENGTH_SHORT).show();
-        }*/
     }
 
     public void entrar(View v) {
